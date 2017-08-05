@@ -33,7 +33,7 @@ namespace OCPDemo
         {
             foreach(var shape in shapes)
             {
-                Console.WriteLine(shape.Area());
+                Console.WriteLine(shape.GetType().ToString() + " " + shape.Area());
             }
         }
     }
@@ -45,7 +45,10 @@ namespace OCPDemo
             List<Shape> squares = new List<Shape>();
             Square s = new Square();
             s.Height = 5;
+            Circle c = new Circle();
+            c.Radius = 10;
             squares.Add(s);
+            squares.Add(c);
             d.Show(squares);
         }
     }
